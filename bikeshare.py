@@ -68,6 +68,8 @@ def get_filters() -> tuple:
             print("Invalid day of week. Please try again.")
 
     print(f"Chosen city: {city.title()}, month: {month.title()}, day: {day.title()}")
+    print(f"\n > > > > > > > > > > > NOTE: Outputs are made to fit within {DIVIDER_LENGTH} characters."
+          " Make sure to have wide enough terminal window ! ! ! < < < < < < < < < < <\n")
     print('-'*DIVIDER_LENGTH)
     return city, month, day
 
