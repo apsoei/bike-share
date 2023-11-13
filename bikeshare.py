@@ -245,7 +245,10 @@ def user_stats(df, filter: str) -> None:
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*DIVIDER_LENGTH)
 
+
 def individual_view(df, filter: str) -> None:
+    """Displays individual trips in JSON style if the user wants to see it"""
+
     res = input("\nWould you like to view all individual trips? Enter yes (y) or no (n).\n"
                 f"(WARNING: This may take a while if the filter is for all month and days ! ! ! {filter.strip().strip('(').strip(')')})\n")
 
@@ -261,6 +264,8 @@ def individual_view(df, filter: str) -> None:
         print('-'*DIVIDER_LENGTH)
 
 def raw_data_view(df, filter: str) -> None:
+    """Displays raw data in chunks of 5 rows if the user wants to see it"""
+
     res = input("\nWould you like to view raw data? Enter yes (y) or no (n).\n")
     row = 0
     total = len(df)
@@ -274,15 +279,19 @@ def raw_data_view(df, filter: str) -> None:
                 break
 
 
-# Helper function to make a statement in the following format:
-# msg1: result1, msg2: result2 . . .
 def make_count_info(count: int, total: int) -> str:
+    """
+    Helper function to make a statement in the following format:
+    msg1: result1, msg2: result2 . . .
+    """
+    
     ratio = "{:.2f}".format(count / total * 100)
     return f'count: {count} ({ratio}%)   total: {total}'
     
 
-# Helper function to print
 def print_result(message: str, result, extras: str = '') -> None:
+    """Helper function to print"""
+
     result = str(result)
     if extras:
         result += ' ' * 4 + extras
@@ -294,8 +303,9 @@ def print_result(message: str, result, extras: str = '') -> None:
         print(message + result)
 
 
-# Helper function to print
 def print_counts(header: str, pd_count_series: pd.Series) -> None:
+    """Helper function to print"""
+
     print(header)
     for idx, cnt in pd_count_series.items():
         msg = f"# of {idx}s:"
