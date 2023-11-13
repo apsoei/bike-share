@@ -8,7 +8,7 @@ Data Analysis Project on US Bike Share data
 The interactive (via terminal) python program reads in csv data of us bike share during 2017 in Chicago, New York city, and Washington and calculates and displays various statistics.
 
 ### Files used
-bikeshare.py
+bikeshare.py  
 US Bike share data 2017
 + chicago.csv
 + new_york_city.csv
@@ -18,5 +18,5 @@ US Bike share data 2017
 Course from Udacity's "Programming for Data Science with Python"
 
 ### Author
-Jae O.
+Jae O.  
 gone3457@gmail.com
