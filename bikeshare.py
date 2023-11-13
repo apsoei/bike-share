@@ -2,12 +2,17 @@ import time
 import pandas as pd
 import json
 
+# Dictionary of city name and csv file name
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
+# Month and day lists
 MONTHS = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 DAYS_SHORT = ['mon', 'tue', 'wed', 'th', 'fri', 'sat', 'sun', 'all']
+
+# Message length constants for printing
 MSG_LENGTH = 50
 EXTRA_MSG_SPACE = 20
 DIVIDER_LENGTH = 150
